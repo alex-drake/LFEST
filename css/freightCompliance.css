@@ -1,0 +1,230 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700');
+
+body {
+  font-family: "Raleway", sans-serif;  
+ }
+
+.smallFont {
+	font-size: 0.58vw;
+	overflow-y: scroll;
+}
+
+/* margins and padding
+===================================================================*/
+
+.extra-margins {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+	border-color: #FFFFFF;
+}
+
+main {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+/* info-box
+=================================================================== */
+.info-box {
+  min-height: 140px;
+  min-width: 160px;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  padding: 1.25rem;
+  color: white;
+  text-align: center;
+  -webkit-box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
+}
+
+.info-box i {
+  display: block;
+  height: 100px;
+  font-size: 60px;
+  line-height: 100px;
+  width: 100px;
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+  padding-right: 20px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.info-box .count {
+  margin-top: 20px;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.info-box .title {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.info-box .desc {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.info-box.danger {
+  background: #ff5454;
+  border: 1px solid #ff2121;
+}
+
+.info-box.warning {
+  background: #ff9800;
+  border: 1px solid #ff9800;
+}
+
+.info-box.primary {
+  background: #20a8d8;
+  border: 1px solid #1985ac;
+}
+
+.info-box.info {
+  background: #67c2ef;
+  border: 1px solid #39afea;
+}
+
+.info-box.success {
+  background: #79c447;
+  border: 1px solid #61a434;
+}
+
+.info-box.grey {
+  background: #F2F2F2;
+  border: 1px solid #FAFAFA;
+}
+
+/* Card additions 
+================================================*/
+.card-block.top{
+	background: #F2F2F2;
+}
+.card-text.right {
+	text-align: right;
+}
+.card-text.large {
+	font-size: 1.5rem;
+}
+
+.card-text.bold {
+	font-weight: 700;
+}
+
+/* Front Page Table Format
+==========================================*/
+table#index {
+	width: 90%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	font-size: 0.8rem;
+}
+
+table#index th {
+	border: 1px solid #FAC090;
+	background-color: #FAC090;
+	padding: 0.8rem;
+	font-weight: 600;
+	/*text-transform: uppercase;*/
+}
+
+table#index tr {
+	border-bottom:1px solid #DCDCDC;
+}
+
+/* Op Details Table Format
+==========================================*/
+table#t01 {
+    width:95%;
+	margin: 1rem;
+	border: 3px solid #FAC090;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #FDEADA;
+	font-size: 1rem;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#FFFFFF;
+   font-size: 1rem;
+}
+table#t01 th {
+    background-color: #FAC090;
+    color: black;
+	font-size: 1.2rem;
+}
+
+/* Op Stops Table Format
+==========================================*/
+table#stop {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+table#stop td {
+    border: 1px solid #FAC090;
+    border-spacing:0px;
+	min-width: 4rem;
+	text-align: center;
+	font-size: 1.4rem;
+	padding: 0.8rem;
+}
+
+table#stop th {
+	border: 1px solid #FAC090;
+    border-spacing:0px;
+	background-color: #FAC090;
+	text-align: center;
+	font-size: 1.6rem;
+	padding: 0.8rem;
+}
+
+/* Op Sancs Table Format
+==========================================*/
+table#sanc {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+table#sanc td {
+    border: 1px solid #FAC090;
+    border-spacing:0px;
+    border-collapse: collapse;
+    min-width: 3rem;
+    text-align: center;
+	padding: 0.7rem;
+}
+
+table#sanc th {
+	border: 1px solid #FAC090;
+    border-spacing:0px;
+	background-color: #FAC090;
+    text-align: left;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+}
+
+/* Sort Buttons (Front Page) 
+==========================================*/
+.btn.matrix, 
+.btn.stops, 
+.btn.offence {
+	margin-top: 2rem;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	font-weight: 600;
+	color: #000000 !important;
+	width: 100%
+}
+.btn.matrix {
+	background-color: #FAC090;
+}
+.btn.stops {
+	background-color: #8EB4E3;
+}
+.btn.offence {
+	background-color: #97B953;
+}
