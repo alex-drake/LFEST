@@ -1,6 +1,8 @@
 # LFEST
 Work for the Freight Compliance Unit to automate their periodic data processing and display the data in a user friendly dashboard.
 
+<img src="https://github.com/aldrake87/LFEST/blob/master/FrontPagejpg.jpg">
+
 This work has helped to familiarise myself with the world of JavaScript, HTML and CSS. Note that the raw data has not been provided due to its sensitive nature.
 
 ## CSS
