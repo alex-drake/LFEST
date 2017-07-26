@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Freight Compliance</title>	
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+	<!-- FC CSS -->
+	<link href="css/freightCompliance.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-toggleable-md navbar-dark orange darken-2">
+		<div class="container">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" onclick="homePg()">
+				<strong>Freight Compliance</strong>
+			</a>
+			<div class="collapse navbar-collapse" id="navbarNav1">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown btn-group">
+						<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+						</a>
+						<div class="dropdown-menu dropdown orange darken-2" aria-labelledby="dropdownMenu1">
+							<a class="dropdown-item" onclick="homePg()">Home</a>
+							<a class="dropdown-item" onclick="opDetPg()">Operator Details</a>
+							<a class="dropdown-item" onclick="opStpPg()">Operator Stop Summary</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--/. Navbar -->
+	
+	<hr class="extra-margins">
+
+	<!-- Front Page. Contains page content -->
+	<div class="content-wrapper" id="homePage">
+		<section class="content-header">
+		<div class="row">
+			<div class="col-md-4" align="left" style="padding-left: 2rem">
+				<p>Welcome to the Freight Compliance site.</p>
+				<p>Click on an operator to see a dashboard showing detailed data.</p>
+				<p>Click the arrows to expand the areas in the table below.</p>
+			</div>
+			<div class="col-md-2">
+				<button id="matSort" type="button" class="btn matrix">Matrix Score</button>
+			</div>
+			<div class="col-md-2">
+				<button id="stopSort" type="button" class="btn stops">Total Stops</button>
+			</div>
+			<div class="col-md-2">
+				<button id="offSort" type="button" class="btn offence">Total Offences</button>
+			</div>
+			<div class="col-md-2" align="right">
+				<hr class="extra-margins">
+				<!--<div class="md-form">-->
+				<form class="form-inline">
+					<i class="fa fa-search fa-2x prefix"></i>
+					<input type="text" id="searchForm" class="form-control" placeholder="Company Search" value="">
+					</form>
+				<!--</div>-->
+			</div>		
+		</div>			
+		</section>
+		<section class="content">
+			<div class="row">
+				<div class="col-md-12" align="center">
+					<div id="indexTable"></div>
+				</div>		
+			</div>
+		</section>
+	</div>
+	<!--/. Front Page -->
+	
+	<!-- Operator Details Contains page content -->
+	<div class="content-wrapper" id="opsPage">
+		<section class="content">
+			<div class="row">
+				<div class="col-md-10">
+				
+					<!-- Company Box -->
+					<div class="row">
+						<div class="card card-block top">
+							<!-- Top Row -->
+							<div class="row">
+								<!-- Company Search -->
+								<div class="col-md-6">
+									<div id="fetchComps"></div>
+								</div>
+								<!-- Company License No. -->
+								<div class="col-md-6">
+									<div class="card-text right large" id="cellLic"> - - </div>
+								</div>
+							</div>
+							<!-- Second Row -->
+							<div class="row">
+								<!-- Director -->
+								<div class="col-md-3">
+									<div class="card-text bold">Company Director(s)</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card-text" id="CompDir"> - - </div>
+								</div>
+								<div class="col-md-3">
+								</div>
+								<!-- Fleet Size -->
+								<div class="col-md-2">
+									<div class="card-text small bold">Fleet Size</div>
+								</div>
+								<div class="col-md-1">
+									<div class="card-text small" id="FltSz"> - - </div>
+								</div>
+							</div>
+							<!-- Third Row -->
+							<div class="row">
+								<!-- Transport Manager -->
+								<div class="col-md-3">
+									<div class="card-text bold">Transport Manager(s)</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card-text" id="TransMng"> - - </div>
+								</div>
+								<div class="col-md-3">
+								</div>
+								<!-- Activation Year -->
+								<div class="col-md-2">
+									<div class="card-text small bold">Activation Year</div>
+								</div>
+								<div class="col-md-1">
+									<div class="card-text small" id="ActYr"> - - </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/. Company Box -->
+					
+					<hr class="extra-margins">
+					
+					<div id="operatorDetails">
+						<!-- OCRS Box -->
+						<div class="row">
+							<div class="card card-block card-warning">
+								<!-- First Row -->
+									<div class="row">
+										<div class="col-md-2">
+											<div class="card-text bold">OCRS TE</div>
+										</div>
+										<div class="col-md-2">
+											<div class="card-text" id="OCRSTEA"> - - </div>
+										</div>
+										<div class="col-md-2"></div>
+										<div class="col-md-2">
+											<div class="card-text bold">FORS</div>
+										</div>
+										<div class="col-md-2">
+											<div class="card-text" id="FORSH"> - - </div>
+										</div>
+										<div class="col-md-2"></div>
+									</div>
+									<div class="row">
+										<div class="col-md-2">
+											<div class="card-text bold">OCRS VE</div>
+										</div>
+										<div class="col-md-2">
+											<div class="card-text" id="OCRSVEH"> - - </div>
+										</div>
+										<div class="col-md-2"></div>
+										<div class="col-md-2">
+											<div class="card-text bold">Industry</div>
+										</div>
+										<div class="col-md-2">
+											<div class="card-text" id="industryH"> - - </div>
+										</div>
+										<div class="col-md-2"></div>
+									</div>
+							</div>
+						</div>
+						<!--/. OCRS Box -->
+						
+						<hr class="extra-margins">
+						
+						<!-- FCU Box -->
+						<div class="row">
+							<div class="card card-block card-warning">
+								<div class="card-text bold">FCU Action</div>
+								<div class="card-text small" id="fcuAct">This is the area where the FCU Action will get stored</div>
+								<div class="card-text bold">LFEP Action History</div>
+								<div class="card-text small" id="lfepAct">This is the area where the LFEP Action History will get stored</div>
+								<div class="card-text bold">Outcomes</div>
+								<div class="card-text small" id="fcuAct">This is the area where the Outcomes will get stored</div>
+							</div>
+						</div>
+						<!--/. FCU Box -->
+						
+						<hr class="extra-margins">
+						
+						<!-- Op Address -->
+						<div class="row">
+							<div class="card card-block card-warning">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="card-text bold">Operator Address</div>
+									</div>
+									<div class="col-md-8">
+										<div class="card-text small" id="opAd"><em>Please select a company from the drop-down</em></div>
+									</div>	
+								</div>
+							</div>
+						</div>
+						<!--/. Op Address -->
+					</div>
+					
+					<div id="stopDetails">
+						<!-- Tables -->
+						<div class="row">
+
+							<!-- Stops Table -->
+							<div class="col-md-5" align="center">
+							<table id="stop">
+							  <colgroup>
+								<col span="1" style="background-color:#FDEADA">
+								<col style="background-color:#FFFFFF">
+							  </colgroup>
+							  <tr>
+								<td>Total US Stops</td>
+								<td id="usStops">0</td>
+							  </tr>
+							  <tr>
+								<td>Total VW Stops</td>
+								<td id="vwStops">0</td>
+							  </tr>
+							  <tr>
+								<td>Total Sat. Stops</td>
+								<td id="satStops">0</td>
+							  </tr>
+							  <tr style="font-weight: 700">
+								<td style="background-color:#FAC090">Total Stops</td>
+								<td id="totStops">0</td>
+							  </tr>
+							</table>
+							</div>
+							<!--/. Stops Table -->
+							
+							<!-- Sanctions Table -->
+							<div class="col-md-7" align="center">
+								<table id="sanc">
+								  <colgroup>
+									<col span="1" style="background-color:#FDEADA">
+									<col style="background-color:white">
+									<col span="1" style="background-color:#FDEADA">
+									<col style="background-color:white">
+								  </colgroup>
+								  <tr>
+									<th colspan="4">Offence Type</th>
+								  </tr>
+								  <tr>
+									<td style="background-color:#ffe082">Seizures/Impounds</td>
+									<td id="szImp">0</td>
+									<td>Vehicle Defects</td>
+									<td id="vehDef">0</td>
+								  </tr>
+								  <tr>
+									<td style="background-color:#ffe082">Immediate Prohibitions</td>
+									<td id="imPro">0</td>
+									<td>Driver's Hours/Recording</td>
+									<td id="drvHr">0</td>
+								  </tr>
+								  <tr>
+									<td style="background-color:#ffe082">Deferred Prohibitions</td>
+									<td id="defPro">0</td>
+									<td>Loading Offences</td>
+									<td id="insLd">0</td>
+								  </tr>
+								  <tr>
+									<td>License Offences</td>
+									<td id="licOff">0</td>
+									<td>Height Offences</td>
+									<td id="ohT">0</td>
+								  </tr>
+								  <!--"<tr>
+									<td>Moving Traffic Offences</td>
+									<td id="mtOff">0</td>
+									<td>Height / Tunnels</td>
+									<td id="ohT">0</td>
+								  </tr>-->
+								  <tr>
+									<td>Safe Lorry Scheme</td>
+									<td id="sls">0</td>
+									<td>Moving Traffic Offences</td>
+									<td id="mtOff">0</td>
+								  </tr>  
+								</table>
+							</div>						
+							<!--/. Sanctions Table -->
+
+						</div>
+						<!--/. Tables -->
+					</div>
+					
+					</div>
+					
+				
+				<!-- Info Boxes -->
+				<div class="col-md-2" align="center">
+					<div class="row">
+						<div class="info-box success" id="matBox">
+							<div class="title">Matrix Score</div>
+							<div class="count" id="matrixScore">0</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="info-box success" id="wvwBox">
+							<div class="title">Non-compliance</div>
+							<div class="title">(with VW)</div>
+							<div class="count" id="compWVW"> - %</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="info-box success" id="wovwBox">
+							<div class="title">Non-compliance</div>
+							<div class="title">(without VW)</div>
+							<div class="count" id="compWOVW"> - %</div>
+						</div>
+					</div>
+				</div>
+				<!--/. Info Boxes -->
+			</div>
+		</section>
+		
+		
+		<section>
+			<!-- Op Centre Table -->		
+			<div class="col-md-12" id="opsTable"></div>
+			<!--/. Op Centre Table -->
+			<!-- Stop Detail Table -->		
+			<div class="col-md-12" id="stpTable"></div>
+			<!--/. Stop Detail Table -->
+		</section>
+	</div>
+	<!--/. Operator Details -->
+
+	<!-- SCRIPTS -->
+	<!-- D3 Library -->
+	<script type="text/javascript" src="js/d3.v3.min.js"></script>	
+	<!-- Queue Library -->
+	<script type="text/javascript" src="js/queue.v1.min.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<!-- Melt -->
+	<script type="text/javascript" src="js/melt.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	<!-- FC Library -->
+	<script src="js/freightCompliance2.js"></script>
+	<!--/. SCRIPTS -->
+</body>
+</html>
