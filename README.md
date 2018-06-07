@@ -16,4 +16,4 @@ Table control is granted using [jQuery](https://jquery.com/) and queue.js is use
 [Melt.js](https://github.com/jrideout/melt.js/blob/master/README.md) has been used to manipulate/flatten the data.
 
 ## HTML
-HTML for the dashboard is shown in *index.html*. Note that the page will not function properly as the data to populate the initial table has not been provided.
+HTML for the dashboard is shown in *index.html*. You can view the demo page here [https://alex-drake.github.io/LFEST/](https://alex-drake.github.io/LFEST/#)
