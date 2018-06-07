@@ -1,0 +1,52 @@
+id,date,officerBase,VRM,satStop,opLicence,offences,matScore,n,vw,seize,imP,dfP,disp,hours,height,lic,load,mov,veh,wt,sls,smns,f1029
+1,20/03/2018,The Shire,XXXXXXX,Yes,3113291XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,30/04/2018,Sesame Street,YYYYYYY,No,5921533XY,Driver failing to wear seatbelt,7,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+3,13/12/2017,Evergreen Terrace,ZZZZZZZ,No,9631216XY,Driver failing to wear seatbelt,7,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+4,28/04/2018,The Shire,XXXXXXX,Yes,1319719XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,03/02/2018,Sesame Street,YYYYYYY,No,7561522XY,NA,18,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,23/12/2017,Evergreen Terrace,ZZZZZZZ,No,5882753XY,Contravening Height Restriction;<br>Weekly Rest Period;<br>Daily Rest Single Crewed,26,4,0,0,0,1,0,2,0,0,0,1,0,0,0,0,0
+7,15/03/2018,The Shire,XXXXXXX,No,8086603XY,Breaks,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+8,22/02/2018,Sesame Street,YYYYYYY,Yes,2261732XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+9,02/05/2018,Evergreen Terrace,ZZZZZZZ,No,1852358XY,NA,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+10,11/02/2018,The Shire,XXXXXXX,No,8171795XY,Breaks,11,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+11,20/02/2018,Sesame Street,YYYYYYY,Yes,7561221XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+12,08/05/2018,Evergreen Terrace,ZZZZZZZ,No,7292001XY,Use motor vehicle with insecure load - likely to cause danger;<br>Fail to correctly operate mode switch / Incorrect time set to tachograph,0,2,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0
+13,15/02/2018,The Shire,XXXXXXX,No,3552544XY,USE RECORD SHEET/DRIVER CARD TOO LONG - ARTICLE 34(1) EU REG 165/2014,11,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+14,29/04/2018,Sesame Street,YYYYYYY,No,7034928XY,Fitment insecure or inoperative and danger is caused or likely to be caused;<br>Driver fail to ensure correct functioning and use,21,2,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0
+15,16/12/2017,Evergreen Terrace,ZZZZZZZ,No,6816044XY,Breaks;<br>Daily Rest Single Crewed;<br>Driver fail to ensure correct functioning and use;<br>Tachograph chart not used or used longer than 24 hours / Unauthorised withdrawal or incorrect insertion of card,22,4,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0
+16,13/12/2017,The Shire,XXXXXXX,Yes,2992433XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+17,24/12/2017,Sesame Street,YYYYYYY,Yes,1496962XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+18,21/05/2018,Evergreen Terrace,ZZZZZZZ,No,3113291XY,EXCEED 4.5HRS DRIVING (BAND 0-1HR) CONTRARY TO ARTICLE 7 REG EC561/2006;<br>FAIL TO USE TACHOGRAPH RECORD SHEET OR DRIVER CARD - ARTICLE 34(1) EU 165/2014,22,2,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+19,14/06/2018,The Shire,XXXXXXX,Yes,5921533XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+20,29/03/2018,Sesame Street,YYYYYYY,Yes,9631216XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+21,19/02/2018,Evergreen Terrace,ZZZZZZZ,Yes,1319719XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+22,12/12/2017,The Shire,XXXXXXX,Yes,7561522XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+23,23/12/2017,Sesame Street,YYYYYYY,Yes,5882753XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+24,27/02/2018,Evergreen Terrace,ZZZZZZZ,No,8086603XY,Driver fail to ensure correct functioning and use,10,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+25,12/05/2018,The Shire,XXXXXXX,No,2261732XY,Tyre has break or cut,15,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0
+26,26/01/2018,Sesame Street,YYYYYYY,No,1852358XY,Defective Braking System;<br>Fail to correctly operate mode switch / Incorrect time set to tachograph,9,3,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0
+27,09/06/2018,Evergreen Terrace,ZZZZZZZ,No,8171795XY,Use motor vehicle with insecure load - likely to cause danger,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+28,08/06/2018,The Shire,XXXXXXX,No,7561221XY,Fail to produce a certifcate of professional competence,13,3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+29,08/06/2018,Sesame Street,YYYYYYY,Yes,7292001XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+30,24/05/2018,Evergreen Terrace,ZZZZZZZ,No,3552544XY,DRIVER CPC - NO INITIAL OR PERIODIC TRAINING;<br>NO ROADWORTHINESS CERTIFICATE (TEST CERTIFICATE),32,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+31,26/12/2017,The Shire,XXXXXXX,No,7034928XY,Defective Tyre;<br>Defective Braking System;<br>Driver fail to ensure correct functioning and use;<br>Tachograph chart not used or used longer than 24 hours / Unauthorised withdrawal or incorrect insertion of card,46,4,0,0,1,1,0,2,0,0,0,0,2,0,0,0,0
+32,03/04/2018,Sesame Street,YYYYYYY,No,6816044XY,Breaks;<br>Breaks,0,2,1,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+33,08/05/2018,Evergreen Terrace,ZZZZZZZ,No,2992433XY,Defective Service Brake Operation;<br>Defective Tyre;<br>Missing Mirror,9,5,0,0,0,1,0,0,0,0,0,0,3,0,0,0,0
+34,17/02/2018,The Shire,XXXXXXX,No,1496962XY,Driver fail to ensure correct functioning and use;<br>Tachograph chart not used or used longer than 24 hours / Unauthorised withdrawal or incorrect insertion of card,0,2,1,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+35,13/01/2018,Sesame Street,YYYYYYY,Yes,3113291XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+36,14/05/2018,Evergreen Terrace,ZZZZZZZ,No,5921533XY,FAIL TO PRODUCE REC SHEETS/DRIVER CARD/PRINT OUT - ARTICLE 36 EU REG 165/2014,11,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+37,09/06/2018,The Shire,XXXXXXX,No,9631216XY,Contravening Height Restriction;<br>Daily Rest Single Crewed,22,3,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+38,08/01/2018,Sesame Street,YYYYYYY,No,1319719XY,Excess driving in 2 weeks;<br>Excess driving in 2 weeks;<br>Daily Driving Time;<br>Daily Driving Time,22,4,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0
+39,31/01/2018,Evergreen Terrace,ZZZZZZZ,No,7561522XY,"Lamps, reflectors, rear markings not maintained",0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+40,18/12/2017,The Shire,XXXXXXX,No,5882753XY,EXCESS WEIGHT,15,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+41,24/05/2018,Sesame Street,YYYYYYY,Yes,8086603XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+42,14/04/2018,Evergreen Terrace,ZZZZZZZ,Yes,2261732XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+43,09/06/2018,The Shire,XXXXXXX,Yes,1852358XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+44,04/02/2018,Sesame Street,YYYYYYY,Yes,8171795XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+45,11/02/2018,Evergreen Terrace,ZZZZZZZ,No,7561221XY,"Insecure load with evidence or likelihood of movement, causing, or likelihood of, danger Unsheeted load in bulk tipper or skip",15,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+46,03/02/2018,The Shire,XXXXXXX,Yes,7292001XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+47,12/06/2018,Sesame Street,YYYYYYY,Yes,3552544XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+48,20/03/2018,Evergreen Terrace,ZZZZZZZ,Yes,7034928XY,NA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,

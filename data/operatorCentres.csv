@@ -1,0 +1,35 @@
+OperatorName,LicenceNumber,LicenceType,OperatorType,Directors,TransportManagers,CorrespondenceAddress,addresses,BOROUGH,LAT,LONG,VehiclesSpecified,TrailersSpecified,NumberOfVehiclesAuthorised,NumberOfTrailersAuthorised,Activation.Year,Industry
+Building Stuff etc,3552544XY,Restricted,Limited Company,Bilbo Baggins (Director); Mark Elf (Director),No Transport Manager,Generic Address,Generic Address,Islington,-,-,1,11,2,76,2011,Transport & Logistics - Product Delivery
+Building Stuff etc,3552544XY,Restricted,Limited Company,Bilbo Baggins (Director); Mark Elf (Director),No Transport Manager,Generic Address,Generic Address,Bromley,-,-,10,7,10,76,2011,Transport & Logistics - Product Delivery
+HGVs R Us,8086603XY,Restricted,Limited Company,Mary Berry (Director),Paul Hollywood,Generic Address,Generic Address,Lewisham,-,-,19,6,25,65,1970,Transport & Logistics - Distribution
+Hop Skips Jumps,7561522XY,Restricted,Limited Company,Skippy (Director),No Transport Manager,Generic Address,Generic Address,Enfield,-,-,23,5,37,7,1970,Transport & Logistics - Distribution
+Hop Skips Jumps,7561522XY,Restricted,Limited Company,Skippy (Director),No Transport Manager,Generic Address,Generic Address,Barnet,-,-,16,3,17,7,1970,Transport & Logistics - Distribution
+Keep on Trucking Ltd,5882753XY,Restricted,Limited Company,"Lance Crankshaft (Director), Randy Kowalski (Director)",Road Train,Generic Address,Generic Address,Brent,-,-,16,15,17,65,1970,Transport & Logistics - Distribution
+Keep on Trucking Ltd,5882753XY,Restricted,Limited Company,"Lance Crankshaft (Director), Randy Kowalski (Director)",Road Train,Generic Address,Generic Address,Camden,-,-,16,13,17,65,1970,Transport & Logistics - Distribution
+Kitty Litter Shipping,3113291XY,Restricted,Limited Company,Ms Meow (Director),No Transport Manager,Generic Address,Generic Address,Kingston,-,-,2,14,4,39,1970,Transport & Logistics - Distribution
+Kitty Litter Shipping,3113291XY,Restricted,Limited Company,Ms Meow (Director),No Transport Manager,Generic Address,Generic Address,Wandsworth,-,-,2,11,2,39,1970,Transport & Logistics - Distribution
+Men With Ven,7292001XY,Restricted,Limited Company,SuperHans (Director),Jez,Generic Address,Generic Address,Havering,-,-,1,15,1,33,1983,Transport & Logistics - Distribution
+Men With Ven,7292001XY,Restricted,Limited Company,SuperHans (Director),Jez,Generic Address,Generic Address,Bromley,-,-,7,0,9,33,1983,Transport & Logistics - Distribution
+Mr Plough,1852358XY,Restricted,Limited Company,H. Simpson (Director),No Transport Manager,Generic Address,Generic Address,Lewisham,-,-,6,0,10,22,1997,Transport & Logistics - Product Delivery
+Mr Plough,1852358XY,Restricted,Limited Company,H. Simpson (Director),No Transport Manager,Generic Address,Generic Address,Southwark,-,-,24,13,45,22,1997,Transport & Logistics - Product Delivery
+Pallets and Mallets,1319719XY,Restricted,Limited Company,Timmy M. (Director),No Transport Manager,Generic Address,Generic Address,Enfield,-,-,24,13,45,89,1999,Waste & Recycling - Skip & Grab Hire
+Pallets and Mallets,1319719XY,Restricted,Limited Company,Timmy M. (Director),No Transport Manager,Generic Address,Generic Address,Barnet,-,-,24,11,45,89,1999,Waste & Recycling - Skip & Grab Hire
+Pallets and Mallets,1319719XY,Restricted,Limited Company,Timmy M. (Director),No Transport Manager,Generic Address,Generic Address,Barnet,-,-,24,11,45,89,1999,Waste & Recycling - Skip & Grab Hire
+Rubbish Removals,7561221XY,Restricted,Limited Company,B. Bag (Director),No Transport Manager,Generic Address,Generic Address,Brent,-,-,24,2,45,26,2018,Waste & Recycling - Skip & Grab Hire
+Rubbish Removals,7561221XY,Restricted,Limited Company,B. Bag (Director),No Transport Manager,Generic Address,Generic Address,Camden,-,-,24,1,45,26,2018,Waste & Recycling - Skip & Grab Hire
+Snakes and Ladders but mainly Ladders,7034928XY,Restricted,Limited Company,"Joe King (Director), Jane King (Director)",No Transport Manager,Generic Address,Generic Address,Kingston,-,-,24,15,45,85,1998,Transport & Logistics - Haulage
+Snakes and Ladders but mainly Ladders,7034928XY,Restricted,Limited Company,"Joe King (Director), Jane King (Director)",No Transport Manager,Generic Address,Generic Address,Wandsworth,-,-,24,9,45,85,1998,Transport & Logistics - Haulage
+Snow King,8171795XY,Restricted,Limited Company,Barney Gumble (Director),No Transport Manager,Generic Address,Generic Address,Romford,-,-,24,6,45,51,1986,Construction - Engineering
+Snow King,8171795XY,Restricted,Limited Company,Barney Gumble (Director),No Transport Manager,Generic Address,Generic Address,Southwark,-,-,2,2,2,51,1986,Construction - Engineering
+Total Re-haul,1496962XY,Standard International,Limited Company,D. Quaid (Director),Vilos Cohaagen,Generic Address,Generic Address,Enfield,-,-,626,2,1431,50,1997,Waste & Recycling - Skip & Grab Hire
+Total Re-haul,1496962XY,Standard International,Limited Company,D. Quaid (Director),Vilos Cohaagen,Generic Address,Generic Address,Barnet,-,-,626,14,1431,50,1997,Waste & Recycling - Skip & Grab Hire
+Transport Carrying Haulers,5921533XY,Standard International,Limited Company,Insert Name Here (Director),,Generic Address,Generic Address,Brent,-,-,626,12,1431,40,3016,Transport & Logistics - Haulage
+Transport Carrying Haulers,5921533XY,Standard International,Limited Company,Insert Name Here (Director),,Generic Address,Generic Address,Camden,-,-,626,6,1431,40,3016,Transport & Logistics - Haulage
+Trashbat,2261732XY,Standard International,Limited Company,N. Barley (Director),Pingu,Generic Address,Generic Address,Kingston,-,-,626,12,1431,31,1964,Waste & Recycling - Skip & Grab Hire
+Trashbat,2261732XY,Standard International,Limited Company,N. Barley (Director),Pingu,Generic Address,Generic Address,Wandsworth,-,-,626,11,1431,31,1964,Waste & Recycling - Skip & Grab Hire
+Twister,6816044XY,Standard International,Limited Company,Insert Name Here (Director),R.A.N Outofideas,Generic Address,Generic Address,Romford,-,-,626,3,1431,10,1985,Transport & Logistics - Product Delivery
+Twister,6816044XY,Standard International,Limited Company,Insert Name Here (Director),R.A.N Outofideas,Generic Address,Generic Address,Wandsworth,-,-,626,5,1431,10,1985,Transport & Logistics - Product Delivery
+UK Cargo Bill Ltd,9631216XY,Standard International,Limited Company,Insert Name Here (Director),R.A.N Outofideas,Generic Address,Generic Address,Havering,-,-,626,11,1431,24,1999,Transport & Logistics - Haulage
+UK Cargo Bill Ltd,9631216XY,Standard International,Limited Company,Insert Name Here (Director),R.A.N Outofideas,Generic Address,Generic Address,Bromley,-,-,626,12,1431,24,1999,Transport & Logistics - Haulage
+Zooniverse Ltd,2992433XY,Standard International,Limited Company,Vince Noir (Director),Howard Moon,Generic Address,Generic Address,Lewisham,-,-,626,10,1431,56,2004,Construction - Engineering
+Zooniverse Ltd,2992433XY,Standard International,Limited Company,Vince Noir (Director),Howard Moon,Generic Address,Generic Address,Southwark,-,-,626,1,1431,56,2004,Construction - Engineering
