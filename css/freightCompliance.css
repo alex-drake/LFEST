@@ -1,24 +1,77 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,700');
 
 body {
-  font-family: "Raleway", sans-serif;  
+  font-family: "Open Sans", sans-serif!important;
  }
-
 .smallFont {
 	font-size: 0.58vw;
 	overflow-y: scroll;
 }
 
+/* for hiding the page whilst loading data*/
+#cover {
+	position: fixed; 
+	height: 100%; 
+	width: 100%; 
+	top:0;
+	left: 0;
+	background: #fff; 
+	z-index:1000;
+}
+
+.selectdiv select{
+	font-family: "Open Sans", sans-serif;
+	font-size: 3vh;
+	background: #F2F2F2;
+	border: 0px;
+	border-bottom: 0.3vh solid #bdbdbd;
+	font-weight: 700;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 60vw;
+}
+
+.selectdiv option{
+	font-size: 1.66vh;
+	background: #F2F2F2;
+	border: 0px;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 80vw;
+}
+
+.selectdiv select::-ms-expand {
+	display: none;
+}
+
+#cellLic {
+	font-size: 2.8vh;
+	font-weight: 500;
+}
+
+#CompDir, #TransMng{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 3vh;
+}
+
+/* Roundel
+===================================================================*/
+#TFL-logo {
+	height: 2.25vw;
+	width: 3.24vw;
+}
+
 /* margins and padding
 ===================================================================*/
-
 .extra-margins {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 	border-color: #FFFFFF;
 }
-
 main {
     padding-top: 3rem;
     padding-bottom: 2rem;
@@ -37,8 +90,10 @@ main {
   -webkit-box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
+  transition: background 500ms, border 500ms;
+  -webkit-transition: background 500ms, border 500ms;
+  -moz-transition: background 500ms, border 500ms;
 }
-
 .info-box i {
   display: block;
   height: 100px;
@@ -51,52 +106,54 @@ main {
   padding-right: 20px;
   color: rgba(255, 255, 255, 0.75);
 }
-
 .info-box .count {
   margin-top: 20px;
   font-size: 34px;
   font-weight: 700;
 }
-
 .info-box .title {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
 }
-
 .info-box .desc {
   margin-top: 10px;
   font-size: 12px;
 }
-
 .info-box.danger {
-  background: #ff5454;
-  border: 1px solid #ff2121;
+  /*background: #ff5454;
+  border: 1px solid #ff2121;*/
+  background: #d32f2f;
+  border: 1px solid #f44336;
 }
-
 .info-box.warning {
-  background: #ff9800;
+  /*background: #ff9800;
+  border: 1px solid #ff9800;*/
+  background: #f57c00;
   border: 1px solid #ff9800;
 }
-
 .info-box.primary {
   background: #20a8d8;
   border: 1px solid #1985ac;
 }
-
 .info-box.info {
   background: #67c2ef;
   border: 1px solid #39afea;
 }
-
 .info-box.success {
-  background: #79c447;
-  border: 1px solid #61a434;
+  /*background: #79c447;
+  border: 1px solid #61a434;*/
+  background: #388e3c;
+  border: 1px solid #4caf50;
 }
-
 .info-box.grey {
   background: #F2F2F2;
   border: 1px solid #FAFAFA;
+}
+
+.info-box.fcu {
+  background: #f57c00;
+  border: 1px solid #fb8c00;
 }
 
 /* Card additions 
@@ -110,121 +167,227 @@ main {
 .card-text.large {
 	font-size: 1.5rem;
 }
-
 .card-text.bold {
 	font-weight: 700;
-}
-
-/* Front Page Table Format
-==========================================*/
-table#index {
-	width: 90%;
-	padding-right: 1rem;
-	padding-left: 1rem;
-	font-size: 0.8rem;
-}
-
-table#index th {
-	border: 1px solid #FAC090;
-	background-color: #FAC090;
-	padding: 0.8rem;
-	font-weight: 600;
-	/*text-transform: uppercase;*/
-}
-
-table#index tr {
-	border-bottom:1px solid #DCDCDC;
 }
 
 /* Op Details Table Format
 ==========================================*/
 table#t01 {
     width:95%;
-	margin: 1rem;
-	border: 3px solid #FAC090;
+	margin: 1vh;
+	border: 1px solid #292b2c;
 }
 table#t01 tr:nth-child(even) {
     background-color: #FDEADA;
-	font-size: 1rem;
 }
 table#t01 tr:nth-child(odd) {
    background-color:#FFFFFF;
-   font-size: 1rem;
 }
 table#t01 th {
-    background-color: #FAC090;
-    color: black;
-	font-size: 1.2rem;
+	border: 1px solid #292b2c;
+    background-color: #f57c00;
+    color: #fff;
+	font-size: 1.5vh;
+	padding: .5vw;
+	min-width: 8vw;
+}
+
+table#t01 td {
+	border: 1px solid #292b2c;
+    border-spacing:0px;
+	font-size: 1.4vh;
+	padding: .5vw;
+	min-width: 8vw;
 }
 
 /* Op Stops Table Format
 ==========================================*/
 table#stop {
-	margin-top: 3rem;
-	margin-bottom: 3rem;
+	width: 95%;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
 }
-
 table#stop td {
-    border: 1px solid #FAC090;
+    border: 1px solid #292b2c;
     border-spacing:0px;
-	min-width: 4rem;
+	min-width: 8vw;
 	text-align: center;
-	font-size: 1.4rem;
-	padding: 0.8rem;
+	font-size: 1.4vh;
+	padding: .5vw;
+}
+table#stop th {
+	border: 1px solid #292b2c;
+    border-spacing:0px;
+	background-color: #f57c00;
+	color: #fff;
+	min-width: 6vw;
+	text-align: center;
+	font-size: 1.5vh;
+	padding: .5vw;
 }
 
-table#stop th {
-	border: 1px solid #FAC090;
-    border-spacing:0px;
-	background-color: #FAC090;
-	text-align: center;
-	font-size: 1.6rem;
-	padding: 0.8rem;
+table#stop thead tr th:nth-child(n+5):nth-child(-n+5),
+table#stop tbody tr td:nth-child(n+5):nth-child(-n+5){
+	text-align: left;
 }
 
 /* Op Sancs Table Format
 ==========================================*/
 table#sanc {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-top: 1.3vh;
+	margin-bottom: 1.3vh;
 }
-
 table#sanc td {
-    border: 1px solid #FAC090;
+    border: 1px solid #292b2c;
     border-spacing:0px;
     border-collapse: collapse;
-    min-width: 3rem;
+	min-width: 3vw;
+	font-size: 1.4vh;
     text-align: center;
-	padding: 0.7rem;
+	padding: 0.7vw;
 }
-
 table#sanc th {
-	border: 1px solid #FAC090;
+	border: 1px solid #292b2c;
     border-spacing:0px;
-	background-color: #FAC090;
+	background-color: #f57c00;
+	color: #fff;
     text-align: left;
-	font-size: 1.2rem;
-	padding: 0.5rem;
+	font-size: 1.5vh;
+	padding: 0.5vh;
 }
 
-/* Sort Buttons (Front Page) 
+/* Op Offences Table Format
 ==========================================*/
-.btn.matrix, 
-.btn.stops, 
-.btn.offence {
-	margin-top: 2rem;
-	text-transform: uppercase;
-	font-size: 0.7rem;
-	font-weight: 600;
-	color: #000000 !important;
-	width: 100%
+table#offences {
+	margin-top: 1vh;
+	margin-bottom: 1vh;
 }
-.btn.matrix {
-	background-color: #FAC090;
+table#offences td {
+    border: 1px solid #292b2c;
+    border-spacing:0px;
+    border-collapse: collapse;
+	min-width: 3vw;
+	font-size: 1.4vh;
+    text-align: center;
+	padding: 0.5vw;
 }
-.btn.stops {
-	background-color: #8EB4E3;
+table#offences th {
+	border: 1px solid #292b2c;
+    border-spacing:0px;
+	background-color: #f57c00;
+	color: #fff;
+    text-align: left;
+	font-size: 1.5vh;
+	padding: 0.5vw;
 }
-.btn.offence {
-	background-color: #97B953;
+
+/* pie chart formats
+==========================================*/
+svg {
+	width: 36vw;
+	height: 33vh;
+	padding: 2vh;
+	font-size: 1.3vh;
+	margin-left: 1.3vw;
+	margin-right: 1.3vw;
+}
+path.slice {
+	stroke-width: 0.1vw;
+}
+polyline {
+	opacity: .3;
+	stroke: black;
+	stroke-width: 0.1vw;
+	fill: none;
+}
+
+/* DataTable Table (Table?) 
+============================================*/
+.dt-button {
+	font-family: "Open Sans", sans-serif!important;
+	font-size: 1.4vh !important;
+}
+table#fcuTable thead tr td:nth-child(n+0):nth-child(-n+4){
+	font-weight: 500;
+	font-size: 1.4vh;
+	color: #fff;
+	background-color: #f57c00;
+}
+table#fcuTable thead tr td:nth-child(n+5):nth-child(-n+8){
+	font-weight: 500;
+	font-size: 1.4vh;
+	color: #fff;
+	background-color: #1976d2;
+}
+table#fcuTable thead tr td:nth-child(n+9):nth-child(-n+19){
+	font-weight: 500;
+	font-size: 1.4vh;
+	color: #fff;
+	background-color: #388e3c;
+}
+table#fcuTable thead tr td:nth-child(n+20):nth-child(-n+23){
+	font-weight: 500;
+	font-size: 1.4vh;
+	color: #fff;
+	background-color: #d32f2f;
+}
+table#fcuTable tbody {
+	font-size: 1.4vh;
+}
+table#fcuTable thead tr td:nth-child(n+4):nth-child(-n+4),
+table#fcuTable tbody tr td:nth-child(n+4):nth-child(-n+4){
+	border-right: 1px solid #292b2c;
+}
+table#fcuTable thead tr td:nth-child(n+8):nth-child(-n+8),
+table#fcuTable tbody tr td:nth-child(n+8):nth-child(-n+8){
+	border-right: 1px solid #292b2c;
+}
+table#fcuTable thead tr td:nth-child(n+19):nth-child(-n+19),
+table#fcuTable tbody tr td:nth-child(n+19):nth-child(-n+19){
+	border-right: 1px solid #292b2c;
+}
+table#fcuTable thead tr td:nth-child(n+2):nth-child(-n+23),
+table#fcuTable tbody tr td:nth-child(n+2):nth-child(-n+23){
+	text-align: center;
+}
+#fcuTable_filter label{
+	font-family: "Open Sans", sans-serif !important;
+	font-size: 1.1vh;
+}
+#fcuTable_filter input{
+	font-family: "Open Sans", sans-serif !important;
+	font-size: 2vh;
+}
+#fcuTable_info, 
+#fcuTable_paginate {
+	font-size: 1.5vh;
+}
+
+/* Collisions and Congestion Tables
+============================================*/
+
+table.rsiT{
+	font-size: 1.4vh;
+	border: 1px solid #292b2c;
+	margin: 1vw;
+	padding: .5vw;
+}
+
+table.rsiT thead{
+	font-weight: 500;	
+	color: #fff;
+	background-color: #f57c00;	
+	font-size: 1.5vh;
+}
+
+table.rsiT th{
+  padding: .5vw;
+  border: 1px solid #292b2c;
+}
+
+table.rsiT td{
+	padding: .5vw;
+	min-width: 5vw;
+	border: 1px solid #292b2c;
 }
