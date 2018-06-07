@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" href="data/truck.jpg" />
     <title>Freight Compliance</title>	
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -14,73 +15,58 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.css" rel="stylesheet">
-	
+	<!-- Data Table-->
+	<link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	<link href="css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">	
 </head>
 
 <body>
+	<div id="cover"></div>
 	<!-- Navbar -->
-	<nav class="navbar navbar-toggleable-md navbar-dark orange darken-2">
-		<div class="container">
+	<nav class="navbar navbar-toggleable-md navbar-dark orange darken-2 fixed-top scrolling-navbar">
+		<a href="https://tfl.gov.uk/" target="_blank">
+			<img id="TFL-logo" src="data/roundel_sm.png" style="margin-right: 1vw;"></img>
+		</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<a class="navbar-brand" onclick="homePg()">
-				<strong>Freight Compliance</strong>
+				<strong style="font-weight: 600;">FCU DASHBOARD</strong>
 			</a>
 			<div class="collapse navbar-collapse" id="navbarNav1">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item dropdown btn-group">
-						<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-							<span class="glyphicon glyphicon-menu-hamburger"></span>
-						</a>
-						<div class="dropdown-menu dropdown orange darken-2" aria-labelledby="dropdownMenu1">
-							<a class="dropdown-item" onclick="homePg()">Home</a>
-							<a class="dropdown-item" onclick="opDetPg()">Operator Details</a>
-							<a class="dropdown-item" onclick="opStpPg()">Operator Stop Summary</a>
-						</div>
+					<li class="nav-item">
+						<a class="nav-link" onClick="opDetPg()">Operator Details</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" onClick="opStpPg()">Operator Stops</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" onClick="rssPg()">Roads Impact</a>
 					</li>
 				</ul>
 			</div>
-		</div>
 	</nav>
-	<!--/. Navbar -->
-	
+	<main>
+	<!--/. Navbar -->	
 	<hr class="extra-margins">
-
 	<!-- Front Page. Contains page content -->
 	<div class="content-wrapper" id="homePage">
 		<section class="content-header">
 		<div class="row">
-			<div class="col-md-4" align="left" style="padding-left: 2rem">
-				<p>Welcome to the Freight Compliance site.</p>
-				<p>Click on an operator to see a dashboard showing detailed data.</p>
-				<p>Click the arrows to expand the areas in the table below.</p>
+			<div class="col-md-12" align="left" style="padding-left: 2rem;">
+				<p>Welcome to the Freight Compliance site.<br>
+				Click on an operator to see more detailed information. For logs we were unable to process, please see
+				<a href="#"> the T: drive</a> for details.<br>
+				Click <a href="#">here</a> for the FCU Process Notes.
+				</p>
 			</div>
-			<div class="col-md-2">
-				<button id="matSort" type="button" class="btn matrix">Matrix Score</button>
-			</div>
-			<div class="col-md-2">
-				<button id="stopSort" type="button" class="btn stops">Total Stops</button>
-			</div>
-			<div class="col-md-2">
-				<button id="offSort" type="button" class="btn offence">Total Offences</button>
-			</div>
-			<div class="col-md-2" align="right">
-				<hr class="extra-margins">
-				<!--<div class="md-form">-->
-				<form class="form-inline">
-					<i class="fa fa-search fa-2x prefix"></i>
-					<input type="text" id="searchForm" class="form-control" placeholder="Company Search" value="">
-					</form>
-				<!--</div>-->
-			</div>		
 		</div>			
 		</section>
-		<section class="content">
+		<section class="content" style="margin: 2%;">
 			<div class="row">
-				<div class="col-md-12" align="center">
-					<div id="indexTable"></div>
-				</div>		
+				<!-- DataTable goes here -->
+				<div id="container" style="margin-right: 2%;" align="center"></div>	
 			</div>
 		</section>
 	</div>
@@ -99,49 +85,39 @@
 							<div class="row">
 								<!-- Company Search -->
 								<div class="col-md-6">
-									<div id="fetchComps"></div>
+									<div id="fetchComps" class="selectdiv"></div>
 								</div>
 								<!-- Company License No. -->
 								<div class="col-md-6">
 									<div class="card-text right large" id="cellLic"> - - </div>
 								</div>
 							</div>
+							<hr class="extra-margins">
 							<!-- Second Row -->
 							<div class="row">
 								<!-- Director -->
-								<div class="col-md-3">
+								<div class="col-md-2">
 									<div class="card-text bold">Company Director(s)</div>
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-7">
 									<div class="card-text" id="CompDir"> - - </div>
-								</div>
-								<div class="col-md-3">
 								</div>
 								<!-- Fleet Size -->
 								<div class="col-md-2">
-									<div class="card-text small bold">Fleet Size</div>
+									<div class="card-text bold">Fleet Size</div>
 								</div>
 								<div class="col-md-1">
-									<div class="card-text small" id="FltSz"> - - </div>
+									<div class="card-text" id="FltSz"> - - </div>
 								</div>
 							</div>
 							<!-- Third Row -->
 							<div class="row">
 								<!-- Transport Manager -->
-								<div class="col-md-3">
+								<div class="col-md-2">
 									<div class="card-text bold">Transport Manager(s)</div>
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-10">
 									<div class="card-text" id="TransMng"> - - </div>
-								</div>
-								<div class="col-md-3">
-								</div>
-								<!-- Activation Year -->
-								<div class="col-md-2">
-									<div class="card-text small bold">Activation Year</div>
-								</div>
-								<div class="col-md-1">
-									<div class="card-text small" id="ActYr"> - - </div>
 								</div>
 							</div>
 						</div>
@@ -157,35 +133,19 @@
 								<!-- First Row -->
 									<div class="row">
 										<div class="col-md-2">
-											<div class="card-text bold">OCRS TE</div>
-										</div>
-										<div class="col-md-2">
-											<div class="card-text" id="OCRSTEA"> - - </div>
-										</div>
-										<div class="col-md-2"></div>
-										<div class="col-md-2">
 											<div class="card-text bold">FORS</div>
 										</div>
-										<div class="col-md-2">
+										<div class="col-md-10">
 											<div class="card-text" id="FORSH"> - - </div>
 										</div>
-										<div class="col-md-2"></div>
 									</div>
 									<div class="row">
 										<div class="col-md-2">
-											<div class="card-text bold">OCRS VE</div>
-										</div>
-										<div class="col-md-2">
-											<div class="card-text" id="OCRSVEH"> - - </div>
-										</div>
-										<div class="col-md-2"></div>
-										<div class="col-md-2">
 											<div class="card-text bold">Industry</div>
 										</div>
-										<div class="col-md-2">
+										<div class="col-md-10">
 											<div class="card-text" id="industryH"> - - </div>
 										</div>
-										<div class="col-md-2"></div>
 									</div>
 							</div>
 						</div>
@@ -196,12 +156,30 @@
 						<!-- FCU Box -->
 						<div class="row">
 							<div class="card card-block card-warning">
-								<div class="card-text bold">FCU Action</div>
-								<div class="card-text small" id="fcuAct">This is the area where the FCU Action will get stored</div>
-								<div class="card-text bold">LFEP Action History</div>
-								<div class="card-text small" id="lfepAct">This is the area where the LFEP Action History will get stored</div>
-								<div class="card-text bold">Outcomes</div>
-								<div class="card-text small" id="fcuAct">This is the area where the Outcomes will get stored</div>
+								<div class="row">
+									<div class="col-md-2">
+										<div class="card-text bold">FCU Status</div>
+									</div>
+									<div class="col-md-10">
+										<div class="card-text" id="fcuAct"> - - </div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2">
+										<div class="card-text bold">LFEP Action History</div>
+									</div>
+									<div class="col-md-10">
+										<div class="card-text" id="lfepAct"> - - </div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2">
+										<div class="card-text bold">Outcomes</div>
+									</div>
+									<div class="col-md-10">
+										<div class="card-text" id="outcome"> - - </div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--/. FCU Box -->
@@ -212,11 +190,11 @@
 						<div class="row">
 							<div class="card card-block card-warning">
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-2">
 										<div class="card-text bold">Operator Address</div>
 									</div>
-									<div class="col-md-8">
-										<div class="card-text small" id="opAd"><em>Please select a company from the drop-down</em></div>
+									<div class="col-md-10">
+										<div class="card-text" id="opAd"><em>Please select a company from the drop-down</em></div>
 									</div>	
 								</div>
 							</div>
@@ -230,87 +208,143 @@
 
 							<!-- Stops Table -->
 							<div class="col-md-5" align="center">
-							<table id="stop">
-							  <colgroup>
-								<col span="1" style="background-color:#FDEADA">
-								<col style="background-color:#FFFFFF">
-							  </colgroup>
-							  <tr>
-								<td>Total US Stops</td>
-								<td id="usStops">0</td>
-							  </tr>
-							  <tr>
-								<td>Total VW Stops</td>
-								<td id="vwStops">0</td>
-							  </tr>
-							  <tr>
-								<td>Total Sat. Stops</td>
-								<td id="satStops">0</td>
-							  </tr>
-							  <tr style="font-weight: 700">
-								<td style="background-color:#FAC090">Total Stops</td>
-								<td id="totStops">0</td>
-							  </tr>
-							</table>
+								<!-- Pie Chart -->
+								<div id = "myPie" align="center"></div>						
+								<!--/. Pie Chart -->
+
 							</div>
 							<!--/. Stops Table -->
 							
 							<!-- Sanctions Table -->
-							<div class="col-md-7" align="center">
+							<div class="col-md-3" align="center">
 								<table id="sanc">
-								  <colgroup>
-									<col span="1" style="background-color:#FDEADA">
-									<col style="background-color:white">
+									<colgroup>
 									<col span="1" style="background-color:#FDEADA">
 									<col style="background-color:white">
 								  </colgroup>
 								  <tr>
-									<th colspan="4">Offence Type</th>
+									<th colspan="2">Sanctions Summary</th>
 								  </tr>
 								  <tr>
-									<td style="background-color:#ffe082">Seizures/Impounds</td>
+									<td>Seizures/Improunds</td>
 									<td id="szImp">0</td>
+								  </tr>
+								  <tr>
+									<td>Immediate Prohibitions</td>
+									<td id="imPro">0</td>
+								  </tr>
+								  <tr>
+									<td>Deferred Prohibitions</td>
+									<td id="defPro">0</td>
+								  </tr>
+								  <tr>
+									<td>F1029</td>
+									<td id="f1029">0</td>
+								  </tr>
+								  <tr>
+									<td>Summons</td>
+									<td id="smns">0</td>
+								  </tr>									
+								</table>
+							</div>
+							<!--/. Sanctions Table -->
+							<!-- Offences Table -->
+							<div class="col-md-4" align="center">
+								<table id="offences">
+								  <colgroup>
+									<col span="1" style="background-color:#FDEADA">
+									<col style="background-color:white">
+								  </colgroup>
+								  <tr>
+									<th colspan="2">Offence Summary</th>
+								  </tr>
+								  <tr>
 									<td>Vehicle Defects</td>
 									<td id="vehDef">0</td>
 								  </tr>
 								  <tr>
-									<td style="background-color:#ffe082">Immediate Prohibitions</td>
-									<td id="imPro">0</td>
 									<td>Driver's Hours/Recording</td>
 									<td id="drvHr">0</td>
 								  </tr>
 								  <tr>
-									<td style="background-color:#ffe082">Deferred Prohibitions</td>
-									<td id="defPro">0</td>
 									<td>Loading Offences</td>
 									<td id="insLd">0</td>
 								  </tr>
 								  <tr>
-									<td>License Offences</td>
+									<td>Licence Offences</td>
 									<td id="licOff">0</td>
+								  </tr>
+								  <tr>
 									<td>Height Offences</td>
 									<td id="ohT">0</td>
 								  </tr>
-								  <!--"<tr>
-									<td>Moving Traffic Offences</td>
-									<td id="mtOff">0</td>
-									<td>Height / Tunnels</td>
-									<td id="ohT">0</td>
-								  </tr>-->
 								  <tr>
 									<td>Safe Lorry Scheme</td>
 									<td id="sls">0</td>
+								  </tr>
+								  <tr>
 									<td>Moving Traffic Offences</td>
 									<td id="mtOff">0</td>
 								  </tr>  
 								</table>
-							</div>						
-							<!--/. Sanctions Table -->
+							</div>			
+							<!--/. Offences Table -->
 
 						</div>
 						<!--/. Tables -->
 					</div>
 					
+					<!-- Roads Impact Details -->
+					<div id="rssDets">
+						<div class="row">
+							<div class="col-md-2" align="center">
+							</div>
+							<div class="col-md-2" align="center">
+								<div class="info-box fcu" id="fatal">
+									<div class="title">Fatal Collisions</div>
+									<div class="count" id="fatalVal"> - </div>
+								</div>
+							</div>
+							<div class="col-md-2" align="center">
+								<div class="info-box fcu" id="serious">
+									<div class="title">Serious Collisions</div>
+									<div class="count" id="seriousVal"> - </div>
+								</div>
+							</div>
+							<div class="col-md-2" align="center">
+								<div class="info-box fcu" id="otherCol">
+									<div class="title">Other Collisions</div>
+									<div class="count" id="otherVal"> - </div>
+								</div>
+							</div>
+							<div class="col-md-2" align="center">
+								<div class="info-box fcu" id="congestion">
+									<div class="title">Congestion Incidents</div>
+									<div class="count" id="congestionVal"> - </div>
+								</div>
+							</div>
+							<div class="col-md-2" align="center">
+							</div>
+						</div>
+						<!-- Roads Impact Detail Table -->	
+						<div class="row">			
+							<div class="col-md-12" id="rssTable">
+							<hr class="extra-margins">
+								<div class="row">
+									<div class="col-md-7">
+										<div class="card-text bold" style="margin-left:1vw;">Collisions</div>
+										<div id="colTab"></div>
+									</div>
+									<div class="col-md-5">
+										<div class="card-text bold" style="margin-left:1vw;">Congestion Incidents</div>
+										<div id="conTab"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+			<!--/. Roads Impact Detail Table -->
+					</div>
+					<!--/. Roads Impact Details -->
 					</div>
 					
 				
@@ -352,7 +386,7 @@
 		</section>
 	</div>
 	<!--/. Operator Details -->
-
+</main>
 	<!-- SCRIPTS -->
 	<!-- D3 Library -->
 	<script type="text/javascript" src="js/d3.v3.min.js"></script>	
@@ -360,8 +394,14 @@
 	<script type="text/javascript" src="js/queue.v1.min.js"></script>
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<!-- Melt -->
-	<script type="text/javascript" src="js/melt.js"></script>
+	<!-- DataTables -->
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+	<!-- DataTables Reorder-->
+	<script type="text/javascript" src="js/dataTables.colReorder.min.js"></script>
+	<!-- DataTables Buttons-->
+	<script type="text/javascript" src="js/dataTables.buttons.min.js"></script>
+	<!-- HTML5 Buttons-->
+	<script type="text/javascript" src="js/buttons.html5.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/tether.min.js"></script>
     <!-- Bootstrap core JavaScript -->
@@ -369,7 +409,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 	<!-- FC Library -->
-	<script src="js/freightCompliance2.js"></script>
+	<script type="text/javascript" src="js/fcu.js"></script>
 	<!--/. SCRIPTS -->
 </body>
 </html>
